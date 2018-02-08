@@ -1,0 +1,171 @@
+.navbar { display: none !important; }
+.container-fluid .row-fluid .span2 { display: none !important; }
+.panel-heading { display: none !important; }
+
+
+form.form-inline,
+form.periodos-habiles
+{ display: none !important; }
+footer { display: none !important; }
+legend { display: none !important; }  
+fieldset { border: none !important; }
+div.dataTables_length, 
+div.dataTables_filter,
+div.dataTables_info,
+div.dataTables_paginate
+ { display: none !important; }
+* { color: black !important; font-family: Arial !important; background: none !important; }
+body { padding: 0; }
+table.table thead tr { 
+  border-top: 1px solid black !important; 
+  border-bottom: 1px solid black !important;
+}
+h1 { 
+  font-size: 10pt !important; 
+  text-align: center !important; 
+  margin-bottom: 10pt;
+}
+h2 { 
+  font-size: 10pt !important; 
+  margin-bottom: 5pt;
+}
+table.table tbody tr { border-bottom: 1px solid gray !important; }
+table.table tbody td, table.table thead th { padding-top: 4px; padding-bottom: 4px; color: black !important; font-size: 10px !important; border: none !important; }
+table.table tfoot th, table.table tfoot td { font-size: 10px !important; }
+table.table thead th { text-transform: uppercase; }
+/*form.informacion-tabulada li { overflow: hidden; line-height: 100% !important; }
+form.informacion-tabulada div.contenedorelemento { width: 110pt !important; font-size: 10px !important; }*/
+form.informacion-tabulada label.etiqueta { font-size: 9pt !important; }
+form.informacion-tabulada div.contenedorelemento span { font-size: 9pt !important; margin-left: 150px !important; }
+form.informacion-tabulada > fieldset > ul > li { width: 320px !important; }
+
+.table-condensed th { padding: 3px !important; }
+div.logo-img span { display: block; }
+div.logo-img { 
+  display: block !important; 
+  text-align: center;
+  font: 7pt;
+  margin-bottom: 10pt;
+  margin-top: 1px;
+}
+.not-print { display: none !important; }
+div.items-container div.item { width: 280px; }
+div.item { line-height: 5px !important; }
+div.item label { font-size: 10px !important; line-height: 9px !important; }
+div.item span {  font-size: 10px !important; margin-left: 150px !important; line-height: 9px !important; }
+div.items-container div.page-header { border: 0 !important; padding: 0 !important; }
+div.items-container div.page-header h2 { font-size: 10px !important; border: 1px solid black; border-style: solid none; }
+div.items-container div.page-header h3 { font-size: 10px !important; }
+caption { font-size: 10px !important; }
+table.table tfoot tr { background-color: transparent; }
+div.alert{ display: none; }
+
+table.table-condensed tbody td { padding: 2px !important; font-weight: normal; }
+
+/*Acta final de notas*/
+.btn-group,.Well{
+  display: none !important; 
+}
+
+@page { margin: 1cm 1cm; }
+
+div.solo-imprimir {
+  display: block !important;
+  font-size: 7pt!important;
+  margin-top: 40px;
+}
+
+
+
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.table th, .table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+.table th {
+  font-weight: bold;
+}
+.table thead th {
+  vertical-align: bottom;
+}
+.table thead:first-child tr th, .table thead:first-child tr td {
+  border-top: 0;
+}
+.table tbody + tbody {
+  border-top: 2px solid #ddd;
+}
+.table-condensed th, .table-condensed td {
+  padding: 4px 5px;
+}
+.table-bordered {
+  border: 1px solid #ddd;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.table-bordered th + th,
+.table-bordered td + td,
+.table-bordered th + td,
+.table-bordered td + th {
+  border-left: 1px solid #ddd;
+}
+.table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+}
+.table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+.table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+}
+.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+
+div#modal {
+   display: none;
+}
+.row {
+  margin-right: 2%;
+  margin-left: 2%;
+  border: none ;
+}
+.panel-body {
+  padding: 8px;
+  border: none;
+}
+
+div.saltopagina{
+      display: none;
+   }
+
+

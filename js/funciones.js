@@ -1,0 +1,152 @@
+function enviasuper()
+{
+    var valor=document.getElementById("valor").value;
+    if(valor >=1)
+    {
+        window.location="vendedores.php?s="+valor;
+    }
+}
+function obtiene_http_request()
+{
+var req = false;
+try
+  {
+    req = new XMLHttpRequest(); /* p.e. Firefox */
+  }
+catch(err1)
+  {
+  try
+    {
+     req = new ActiveXObject("Msxml2.XMLHTTP");
+  /* algunas versiones IE */
+    }
+  catch(err2)
+    {
+    try
+      {
+       req = new ActiveXObject("Microsoft.XMLHTTP");
+  /* algunas versiones IE */
+      }
+      catch(err3)
+        {
+         req = false;
+        }
+    }
+  }
+return req;
+}
+var miPeticion = obtiene_http_request();
+/********************************************/
+function from_post_1(id,ide,url)
+{
+	//alert(document.form.pais.options[document.form.pais.selectedIndex].text);
+	//alert("id="+id+"ide="+ide+"url="+url);
+	
+		
+		//para que no guarde la página en el caché...
+		var mi_aleatorio=parseInt(Math.random()*99999999);
+		//creo la URL dinámica
+		var vinculo=url+"?rand="+mi_aleatorio+"&id="+id;
+		//alert(vinculo);
+		//ponemos true para que la petición sea asincrónica
+		miPeticion.open("POST",vinculo,true);
+		miPeticion.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		miPeticion.send(vinculo);
+		
+		
+		//ahora procesamos la información enviada
+		miPeticion.onreadystatechange=miPeticion.onreadystatechange=function(){
+           
+               if (miPeticion.readyState==4)
+               {
+				   
+                       if (miPeticion.status==200)
+                       {
+           
+                               var http=miPeticion.responseText;
+                               document.getElementById(ide).innerHTML= http;
+
+                       }
+               }
+               
+       }
+       miPeticion.send(null);
+	
+}
+/********************************************/
+function from_post(id,id_venta,ide,url)
+{
+	//alert(document.form.pais.options[document.form.pais.selectedIndex].text);
+	//alert("id="+id+"ide="+ide+"url="+url);
+	
+		
+		//para que no guarde la página en el caché...
+		var mi_aleatorio=parseInt(Math.random()*99999999);
+		//creo la URL dinámica
+		var vinculo=url+"?rand="+mi_aleatorio+"&id="+id+"&id_venta="+id_venta;
+		//alert(vinculo);
+		//ponemos true para que la petición sea asincrónica
+		miPeticion.open("POST",vinculo,true);
+		miPeticion.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		miPeticion.send(vinculo);
+		
+		
+		//ahora procesamos la información enviada
+		miPeticion.onreadystatechange=miPeticion.onreadystatechange=function(){
+               //alert("ready_State="+miPeticion.readyState);
+               if (miPeticion.readyState==4)
+               {
+				   //alert(miPeticion.readyState);
+                       //alert("status ="+miPeticion.status);
+                       if (miPeticion.status==200)
+                       {
+                                //alert(miPeticion.status);
+                               //var http=miPeticion.responseXML;
+                               //alert("http="+http);
+                               var http=miPeticion.responseText;
+                               document.getElementById(ide).innerHTML= http;
+
+                       }
+               }
+               
+       }
+       miPeticion.send(null);
+	
+}
+function cerrar()
+{
+    document.getElementById("ajax").innerHTML="";
+}
+function mostrarProductosPorTipo(id_factura,id_tipo,id_venta)
+{
+    if(id_tipo != 0)
+    {
+       window.location="add_producto_factura.php?id_factura="+id_factura+"&id_venta="+id_venta+"&id_tipo="+id_tipo;
+    }
+}
+
+function addPerson(e) {
+  e.preventDefault();
+  const row = createRow({
+    name: $('#name').val(),
+    lastname: $('#lastname').val()
+  });
+  $('table tbody').append(row);
+  clean();
+}
+
+function createRow(data) {
+  return (
+    `<tr>` +
+      `<td>${$('tbody tr').length + 1}</td>` +
+      `<td>${data.name}</td>` +
+      `<td>${data.lastname}</td>` +
+    `</tr>`
+  );
+}
+
+function clean() {
+  $('#name').val('');
+  $('#lastname').val('');
+  $('#name').focus();
+}
